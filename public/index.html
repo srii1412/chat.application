@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connectify Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="navbar-title">Connectify</h1>
+  </nav>
+
+  <div class="app-container">
+    <!-- Content Card -->
+    <div class="content-card">
+      <!-- Registration Section -->
+      <div id="register-container" class="section">
+        <h2>Welcome to Connectify</h2>
+        <p>Enter your username to start chatting:</p>
+        <input id="username" type="text" class="input" placeholder="Enter your username">
+        <button id="registerBtn" class="button">Register</button>
+      </div>
+
+      <!-- Chat Section -->
+      <div id="chat-container" class="section hidden">
+        <h2>Chat Room</h2>
+        <div class="chat-header">
+          <input id="recipient" type="text" class="input" placeholder="Recipient username">
+        </div>
+        <ul id="messages" class="messages"></ul>
+        <div class="chat-input">
+          <input id="inputMessage" type="text" class="input" placeholder="Type a message...">
+          <button id="sendMessageBtn" class="button">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
